@@ -1,0 +1,73 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    /* font-family: 'Big Shoulders Display', cursive; */
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    color: var(--transparent-white-paragraphs);
+}
+
+.header{
+    color: var(--very-light-gray-background-headings-buttons);
+    font-family: 'Big Shoulders Display', cursive;
+    margin-top: 20px;
+}
+
+.content{
+    width: 240px;
+    line-height: 23px;
+}
+
+.btn{
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background: var(--very-light-gray-background-headings-buttons);
+}
+
+.box-1, .box-2, .box-3{
+    padding-left: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    /* height: 310px; */
+}
+
+.box-1{
+    background: var(--bright-orange);
+}
+
+.box-1 .btn{
+    color: var(--bright-orange);
+}
+
+.box-2{
+    background: var(--dark-cyan);
+}
+
+.box-2 .btn{
+    color: var(--dark-cyan);
+}
+
+.box-3{
+    background: var(--very-dark-cyan);
+}
+
+.box-3 .btn{
+    color: var(--very-dark-cyan);
+}
