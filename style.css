@@ -1,3 +1,5 @@
+/* General */
+
 :root{
     --bright-orange: hsl(31, 77%, 52%);
     --dark-cyan: hsl(184, 100%, 22%);
@@ -8,10 +10,19 @@
 
 html{
     font-size: 62.5%;
+    background: var(--very-light-gray-background-headings-buttons);
+}
+
+@media screen and (min-width:768px) {
+    html{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 }
 
 body{
-    /* font-family: 'Big Shoulders Display', cursive; */
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1.5rem;
 }
@@ -21,7 +32,28 @@ body{
     flex-direction: column;
     width: 340px;
     color: var(--transparent-white-paragraphs);
+    margin: auto;
 }
+
+@media screen and (min-width:768px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: 250px  250px 250px; */
+        /* width: 760px; */
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 900px;
+    }
+}
+
+/* Structure */
 
 .header{
     color: var(--very-light-gray-background-headings-buttons);
@@ -34,19 +66,76 @@ body{
     line-height: 23px;
 }
 
+.box-3 .content{
+    width: 220px;
+}
+
+@media screen and (min-width:1024px){
+    .content{
+        margin-bottom: 55px;
+    }
+}
+
 .btn{
     border: 0;
     border-radius: 20px;
     padding: 10px 15px;
     background: var(--very-light-gray-background-headings-buttons);
+    transition: all 0.5s;
+}
+
+.btn:hover{
+    border: 1px solid var(--very-light-gray-background-headings-buttons);
+    cursor: pointer;
+}
+
+.box-1 .btn,
+.box-2 .btn,
+.box-3 .btn {
+    transition: all 0.5s;
+}
+
+.box-1 .btn:hover,
+.box-2 .btn:hover,
+.box-3  .btn:hover{
+    color: var(--very-light-gray-background-headings-buttons);
+}
+
+.box-1 .btn:hover{
+    background: var(--bright-orange);
+}
+
+.box-2 .btn:hover{
+    background: var(--dark-cyan);
+}
+
+.box-3 .btn:hover{
+    background: var(--very-dark-cyan);
 }
 
 .box-1, .box-2, .box-3{
     padding-left: 35px;
     padding-top: 35px;
     padding-bottom: 35px;
-    /* height: 310px; */
 }
+
+@media screen and (min-width:768px) {
+    .box-1, .box-2, .box-3{
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .box-1, .box-2, .box-3{
+        padding-left: 35px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+/* Skin */
 
 .box-1{
     background: var(--bright-orange);
